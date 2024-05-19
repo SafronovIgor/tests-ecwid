@@ -1,5 +1,3 @@
-package deep.clone;
-
 import java.util.List;
 
 class Man {
@@ -37,19 +35,4 @@ class Man {
         this.favoriteBooks = favoriteBooks;
     }
 
-    public static void main(String[] args) {
-        Man man = new Man(
-                "Alex",
-                25,
-                List.of("Book 1")
-        );
-        try {
-            Man clone = CopyUtils.deepClone(man);
-
-            System.out.println(man);
-            System.out.println(clone);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
 }
